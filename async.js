@@ -70,16 +70,28 @@ let myFunction = async () => {
 
 
 let myFunction2 = () => {
-    let data = sendRequestToServer("esbaş").then((data) => {
-        console.log(data);
-    }).catch((error) => {
-        console.log(error);
-    })
-    // loading 
+    sendRequestToServer("esbaş")
+        .then((data) => {
+            console.log(data);
+        }, (error) => {
+            console.log(error);
+        })
+
+    // sendRequestToServer("esbaş")
+    //     .then((data) => {
+    //         console.log(data);
+    //     }).catch((error) => {
+    //         console.log(error);
+    //     })
+
     console.log("Bu kodun sync çalışmasını istemiyorum..");
 }
 
 myFunction2();
+
+
+
+// CTRL K + C
 
 /// veriyi işleme kodları..
 
